@@ -1,13 +1,13 @@
 import { assets } from '@/assets/assets'
 import Image from 'next/image'
-import Reac, {useState} from 'react'
-import { useClerk, UserButton } from '@clerk/nextjs'
+import React, {useState} from 'react'
+import { useClerk } from "@clerk/nextjs"
 import { useAppContext } from '@/context/AppContext'
 import ChatLabel from './ChatLabel'
 
 const Sidebar = ({expand, setExpand}) => {
 
-    const{openSignIn} = useClerk()
+    const { openSignIn } = useClerk()
     const {user} = useAppContext()
     const [openMenu, setOpenMenu] = useState({id: 0, open:false})
 
